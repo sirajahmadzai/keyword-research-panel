@@ -1,69 +1,134 @@
-# React + TypeScript + Vite
+# 🔍 Keyword Research Panel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based keyword research tool that integrates with RapidAPI to provide real-time keyword suggestions, search volume data, and difficulty metrics.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Real-time Keyword Research**: Search for keywords using RapidAPI integration
+- **Debounced Search**: Automatic search after 300ms pause for better performance
+- **Bookmark System**: Star and save important keywords for later reference
+- **Modern UI**: Clean, responsive design with TailwindCSS
+- **Dark Mode Support**: Automatic theme switching
+- **Loading States**: Smooth loading animations and error handling
+- **Volume & Difficulty Metrics**: View search volume ranges and competition difficulty
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+[Add your deployed URL here]
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 19** with TypeScript
+- **Vite** for fast development and building
+- **TailwindCSS** for styling
+- **RapidAPI** for keyword research data
+- **Ahrefs DR Rank Checker API** for keyword metrics
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/sirajahmadzai/keyword-research-panel.git
+   cd keyword-research-panel
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_RAPIDAPI_KEY=your_rapidapi_key_here
+   ```
+
+4. **Get your RapidAPI key**
+   - Sign up at [RapidAPI](https://rapidapi.com)
+   - Subscribe to the "Ahrefs DR Rank Checker" API
+   - Copy your API key and add it to the `.env` file
+
+5. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+## 🎯 Usage
+
+1. **Search for Keywords**: Enter a topic or keyword in the search box
+2. **View Results**: See keyword suggestions with volume and difficulty metrics
+3. **Bookmark Keywords**: Click the star icon to save important keywords
+4. **Debounced Search**: Results appear automatically after you stop typing
+
+## 📊 API Data
+
+The app uses the Ahrefs DR Rank Checker API to provide:
+- **Keyword Suggestions**: Related keywords and phrases
+- **Search Volume**: Monthly search volume ranges (e.g., "10,000+")
+- **Difficulty Levels**: Competition difficulty (Easy, Medium, Hard, Unknown)
+
+## 🔧 Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Run linting
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── components/
+│   └── KeywordResearchPanel.tsx  # Main component
+├── App.tsx                       # App wrapper
+├── main.tsx                      # Entry point
+└── index.css                     # Global styles
+```
+
+## 🔐 Environment Variables
+
+| Variable | Description | Required |
+|----------|-------------|----------|
+| `VITE_RAPIDAPI_KEY` | Your RapidAPI authentication key | Yes |
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [RapidAPI](https://rapidapi.com) for providing the keyword research API
+- [Ahrefs](https://ahrefs.com) for the keyword data
+- [TailwindCSS](https://tailwindcss.com) for the styling framework
+- [Vite](https://vitejs.dev) for the build tool
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+1. Check the [Issues](https://github.com/sirajahmadzai/keyword-research-panel/issues) page
+2. Create a new issue with detailed information
+3. Include your environment and steps to reproduce
+
+---
+
+**Made with ❤️ by [Your Name]**
