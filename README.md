@@ -14,7 +14,7 @@ A modern React-based keyword research tool that integrates with RapidAPI to prov
 
 ## 🚀 Live Demo
 
-[Add your deployed URL here]
+[https://keyword-research-panel.vercel.app](https://keyword-research-panel.vercel.app)
 
 ## 🛠️ Tech Stack
 
@@ -131,4 +131,4 @@ If you encounter any issues or have questions:
 
 ---
 
-**Made with ❤️ by [Your Name]**
+**Made with ❤️ by Siraj Ahmadzai**
