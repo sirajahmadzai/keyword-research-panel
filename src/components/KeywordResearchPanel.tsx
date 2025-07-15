@@ -8,8 +8,6 @@ type Keyword = {
 
 // RapidAPI Keyword Research API configuration
 const RAPIDAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY;
-const RAPIDAPI_HOST = 'ahrefs-dr-rank-checker.p.rapidapi.com';
-const RAPIDAPI_URL = 'https://ahrefs-dr-rank-checker.p.rapidapi.com/keyword-generator';
 
 // Helper to format volume labels
 function formatVolumeLabel(label: string) {
